@@ -4,12 +4,47 @@
   <meta charset="UTF-8">
   <title>Array CRUD</title>
   <style>
+      
+      #show
+      {
+          text-align: center;
+          padding-top: 2%;
+      }
+      #addEmp, #editor
+      {
+          padding-top: 40px;
+      }
+      .test
+      {
+        margin-right: 10px;   
+      }
+      #tt
+      {
+          text-align: center;
+          padding: 7px;
+      }
+      table, th, td {
+        border: 1px solid #e2e1ec;
+        
+      }
+      th
+      {
+          background: #e9e9f1;
+      }
+      table
+      {
+            text-align: center;
+          font-size: 17px;
+      }
     input[type='submit'], button, [aria-label]{
       cursor: pointer;
     }
     #spoiler{
       display: none;
     }
+      .equal-width td {   width: 20%; 
+        text-align: center;
+      }
   </style>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,60 +54,85 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
+<div id="addEmp">
+     <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+    <div class="form-group">
+      <label for="email">Emp Code:</label>
+      <input type="number" class="form-control"  placeholder="Enter Emp Code" id="add_code">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Emp Name:</label>
+      <input type="text" class="form-control"  placeholder="Enter Name" id="add_name">
+    </div>
+     <div class="form-group">
+      <label for="email">Phone:</label>
+      <input type="number" class="form-control"  placeholder="Enter phone" id="add_phone">
+    </div>
+     <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control"  placeholder="Enter email" id="add_email">
+    </div>
+   
+      <button onclick="saveRecord();" class="btn btn-success">Submit</button>
+ </div>
+    <div class="col-sm-3" id="ginnu">
+       
+    </div>
+</div>
+ 
+<div id="editor" class="col-sm-12">
+     <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+    <div class="form-group">
+      <label for="email">Emp Code:</label>
+      <input type="number" class="form-control"  id="code">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Emp Name:</label>
+      <input type="text" class="form-control"  id="name">
+    </div>
+     <div class="form-group">
+      <label for="email">Phone:</label>
+      <input type="number" class="form-control" id="phone">
+    </div>
+     <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control"  id="email">
+    </div>
+   <div id="btn">
+     
+    </div>
+ </div>
+    <div class="col-sm-3" id="ginnu">
+      
+    </div>
+</div> 
 
- <div class="col-sm-6">
-     <div class="row">
-         <div class="col-sm-6">
-             <div>Name</div>
-            <input type="text" id="add_name" placeholder="Name" class="form-controls">
-        </div>
-          <div class="col-sm-6">
-              <div>Code</div>
-           <input type="number" id="add_code" placeholder="code" class="form-controls">
-        </div>
-     
-     </div>
-     <div class="row">
-         <div class="col-sm-6">
-           <div>Phone</div>
-            <input type="number" id="add_phone" placeholder="phone" class="form-controls">
-        </div>
-          <div class="col-sm-6">
-               <div>Email</div>
-             <input type="text" id="add_email" placeholder="email" class="form-controls">
-  
-        </div>
-     
-     </div>
-      <button onclick="saveRecord();">Submit</button>
+<div class="col-sm-12" id="show">
+   <div class="col-sm-1" id="ginnu">
+      
+    </div>
+    <div class="col-sm-10">
+      <table  class="equal-width">
+          <tr>
+            <th id="tt">Emp Name</th>
+               <th id="tt">Emp code</th>
+               <th id="tt">Emp Phone</th>
+               <th id="tt">Emp Email</th> 
+              <th id="tt">Action</th>
+          </tr>
+        <tbody id="empTable">
+
+        </tbody>
+        </table>
+    </div>
+    <div class="col-sm-1" id="ginnu">
+      
     </div>
     
-
-
-<div id="editor" hidden>
- 
-    <input type="text" id="name">
-    <input type="text" id="code">
-    <input type="text" id="phone" >
-    <input type="text" id="email" >
-   
- 
 </div>
 
-<p id="counter"></p>
-
-<table>
-  <tr>
-        <th>Emp Name</th>
-       <th>Emp code</th>
-       <th>Emp Phone</th>
-       <th>Emp Email</th> 
-      <th>Action</th>
-  </tr>
-    <tbody id="empTable">
-        
-    </tbody>
-</table>
 <script src="js/index.js"></script>
 
 </body>
