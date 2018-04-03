@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Array CRUD</title>
+  <style>
+    input[type='submit'], button, [aria-label]{
+      cursor: pointer;
+    }
+    #spoiler{
+      display: none;
+    }
+  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+ <div class="col-sm-6">
+     <div class="row">
+         <div class="col-sm-6">
+             <div>Name</div>
+            <input type="text" id="add_name" placeholder="Name" class="form-controls">
+        </div>
+          <div class="col-sm-6">
+              <div>Code</div>
+           <input type="number" id="add_code" placeholder="code" class="form-controls">
+        </div>
+     
+     </div>
+     <div class="row">
+         <div class="col-sm-6">
+           <div>Phone</div>
+            <input type="number" id="add_phone" placeholder="phone" class="form-controls">
+        </div>
+          <div class="col-sm-6">
+               <div>Email</div>
+             <input type="text" id="add_email" placeholder="email" class="form-controls">
+  
+        </div>
+     
+     </div>
+      <button onclick="saveRecord();">Submit</button>
+    </div>
+    
+
+
+<div id="editor" hidden>
+ 
+    <input type="text" id="name">
+    <input type="text" id="code">
+    <input type="text" id="phone" >
+    <input type="text" id="email" >
+   
+ 
+</div>
+
+<p id="counter"></p>
+
+<table>
+  <tr>
+        <th>Emp Name</th>
+       <th>Emp code</th>
+       <th>Emp Phone</th>
+       <th>Emp Email</th> 
+      <th>Action</th>
+  </tr>
+    <tbody id="empTable">
+        
+    </tbody>
+</table>
+<script src="js/index.js"></script>
+
+</body>
+</html>
