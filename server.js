@@ -2,9 +2,9 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var app = express();
-var emp = [['jassi','101','99999','jas@gmail.com']];
+var emp = [['jassi','101','9876543210','jas@gmail.com']];
   app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname,"static")));
+app.use(express.static(path.join(__dirname,"view")));
 app.get('/get',function(request, response)
 {
    response.status(200);
