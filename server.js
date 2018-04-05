@@ -2,8 +2,9 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var app = express();
+var port = process.env.PORT || 8000;
 var emp = [['jassi','101','9876543210','jas@gmail.com']];
-  app.use(bodyParser.json());
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname,"view")));
 app.get('/get',function(request, response)
 {
@@ -59,4 +60,4 @@ app.post('/post',function(request, response)
     response.end();
     console.log(request);
 })
-app.listen(8000);
+app.listen(port);
